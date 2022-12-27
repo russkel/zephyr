@@ -75,6 +75,7 @@ static const char *sensor_channel_name[SENSOR_CHAN_COMMON_COUNT] = {
 	[SENSOR_CHAN_DISTANCE] = "distance",
 	[SENSOR_CHAN_CO2] = "co2",
 	[SENSOR_CHAN_VOC] = "voc",
+	[SENSOR_CHAN_AIR_QUALITY_INDEX] = "aqi",
 	[SENSOR_CHAN_GAS_RES] = "gas_resistance",
 	[SENSOR_CHAN_VOLTAGE] = "voltage",
 	[SENSOR_CHAN_CURRENT] = "current",

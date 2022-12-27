@@ -120,6 +120,8 @@ enum sensor_channel {
 	SENSOR_CHAN_CO2,
 	/** VOC level, in parts per billion (ppb) **/
 	SENSOR_CHAN_VOC,
+	/** Air quality index, Umweltbundesamt ratings **/
+	SENSOR_CHAN_AIR_QUALITY_INDEX,
 	/** Gas sensor resistance in ohms. */
 	SENSOR_CHAN_GAS_RES,
 
