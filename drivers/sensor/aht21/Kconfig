@@ -1,0 +1,12 @@
+# AHT21 Digital Humidity and Temperature Sensor
+
+# Copyright (c) 2023 Russ Webber
+# SPDX-License-Identifier: Apache-2.0
+
+config AHT21
+	bool "AHT21 Digital Humidity and Temperature Sensor"
+	default y
+	depends on DT_HAS_AOSONG_AHT21_ENABLED
+	select I2C
+	help
+	  Enable driver for AHT21 Digital Humidity and Temperature Sensor.
