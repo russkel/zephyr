@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 description: |
-    AMS (Austria Mikro Systeme) ens210 Relative Humidity and Temperature Sensor
+    AMS (Austria Mikro Systeme) ENS210 Relative Humidity and Temperature Sensor
 
 compatible: "ams,ens210"
 
