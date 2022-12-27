@@ -1,0 +1,34 @@
+# ENS160 Digital Metal-Oxide Multi-Gas Sensor configuration options
+
+# Copyright (c) 2023 Russ Webber.
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig ENS160
+	bool "ENS160 Digital Metal-Oxide Multi-Gas Sensor"
+	default y
+	depends on DT_HAS_AMS_ENS160_ENABLED
+	select I2C
+	help
+	  Enable driver for ENS160 Digital Metal-Oxide Multi-Gas Sensor.
+if ENS160
+
+config ENS160_CRC_CHECK
+	bool "CRC Check"
+	default y
+	help
+	  Check the CRC value after data reading.
+
+config ENS160_MAX_READ_RETRIES
+	int "Number of value reading retries"
+	default 4
+	help
+	  Number of retries when value reading failed, value not valid
+	  or CRC not ok.
+
+config ENS160_CALIBRATION_SET_RATE
+	int "Time in milliseconds between calibration fetching and setting"
+	default 3500
+	help
+	  Time in milliseconds
+
+endif # ENS160

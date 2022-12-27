@@ -1,0 +1,24 @@
+# Copyright (c) 2022, Russ Webber
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+    AMS (Austria Mikro Systeme) ENS160 Digital Metal-Oxide Multi-Gas Sensor
+
+compatible: "ams,ens160"
+
+include: [sensor-device.yaml, i2c-device.yaml]
+
+on-bus: i2c
+
+properties:
+  humidity-source:
+    type: phandle
+    required: false
+    description: |
+      Sensor and sensor channel that will have the humidity calibration values fetched from.
+
+  temperature-source:
+    type: phandle
+    required: false
+    description: |
+      Sensor and sensor channel that will have the temperature calibration values fetched from.
