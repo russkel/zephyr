@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2022 Russ Webber
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// #include <zephyr/drivers/sensor.h>
+
+/* these cannot be included as it currently stands */
+#define SENSOR_CHAN_HUMIDITY 16
+#define SENSOR_CHAN_AMBIENT_TEMP 13
+
+&i2c0 {
+	ht_sensor: aht21@38 {
+		compatible = "aosong,aht21";
+		reg = <0x38>;
+	};
+	gas_sensor: ens160@53 {
+		compatible = "ams,ens160";
+		reg = <0x53>;
+		humidity-source = <&ht_sensor>;
+		temperature-source = <&ht_sensor>;
+
+		// humidity-sources = <&ht_sensor SENSOR_CHAN_HUMIDITY>;
+		// temperature-sources = <&ht_sensor SENSOR_CHAN_AMBIENT_TEMP>;
+
+		// sources = <&ht_sensor SENSOR_CHAN_HUMIDITY>, <&ht_sensor SENSOR_CHAN_AMBIENT_TEMP>;
+		// sources-names = "HUMIDITY", "TEMPERATURE";
+	};
+};

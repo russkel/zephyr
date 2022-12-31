@@ -1,0 +1,12 @@
+sample:
+  name: ENS160+ATH2x Board Sample
+tests:
+  sample.sensor.ens160_ath2x_board:
+    harness: console
+    tags: sensors
+    depends_on: i2c
+    # harness_config:
+    #     type: one_line
+    #     regex:
+    #         - "temp: (.*); press: (.*);"
+    #     fixture: fixture_i2c_dps310
