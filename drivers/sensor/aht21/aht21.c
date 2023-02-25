@@ -170,7 +170,7 @@ static int aht21_init(const struct device *dev)
 	/* check that device is calibrated and initialised */
 	if ((dev_status & AHT21_SENSOR_INITIALISED) != AHT21_SENSOR_INITIALISED) {
 		LOG_INF("Sensor is not calibrated/initialised. Initialising the calibration registers");
-		/* this initilisation routine is only found in the sample code for AHT20-21 sensors */
+		/* this initialisation routine is only found in the sample code for AHT2X sensors */
 		aht21_calibrate_register(dev, AHT21_REG_CALIBRATION_1);
 		aht21_calibrate_register(dev, AHT21_REG_CALIBRATION_2);
 		aht21_calibrate_register(dev, AHT21_REG_CALIBRATION_3);
